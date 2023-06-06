@@ -1,3 +1,70 @@
 WRITTEN HW - W11
 
-1. express is the framework that node operates in. express gives the rules and structure and Node makes 
+1. express is the framework that node operates in. express aaplys the rules and structure and Node makes everything operate in JS
+
+2. mongoose allows you to create models using the schema method.
+
+3. mongoose interacts with the datatbase and can simply the connection between data management and the database while also creating 
+models and schemas of the objects in the database. 
+
+4. a software pattern is a blueprint for structuring files. an example of this would be creating a server.js. 
+require- const variables - db connections- PORT
+
+5. MVC architecture is the structure of files when building an web api's. it helps organize code for readability and better maintainability 
+
+6. Models is location of your database models and schema. 
+Views is for the html templates and all other UI portions of the website. Controllers handles all the functionality of the website -- so all of 
+your routes. 
+
+7. latency and throughput help the efficiency and responsiveness of the API. Latency is the amount of time that it takes for requests to 
+travel between the client and the server. And througput measures the number of requests that the api can handle. 
+
+8. it is important to have an efficient api with minimized latency and output so the server can be faster, use less ram and be more efficient 
+so the servers load and its running costs are subsequently lower. 
+
+9. auth. is the method to verify the id of the user/client as they move through requests. Its a safegaurd to confirm the client is who they say
+they are. 
+
+10. the auth. process works by assigning the user unique tokens after they are found in the database. 
+
+11. delivering static files 
+
+12. app.use(express.static('files'))
+
+13. jest a testing framework and it is used to simplify running tests on JS projects
+
+14. supertest is helpful to jest because it can make http requests and assert the responses so creating end points is easier. 
+
+15. automotatic testing would be using jest and supertest. Manually testing routes is best used with postman. In which, you can crun tests 
+but manually imputing the route type, token etc to test the routes functionality. 
+
+16. unit testing is used for testing portions of code to assure each function works. Integrated testing is used for testing the 
+interaction between mulitple portions of the code as they work together- things such as data transfer. end to end testing is used for comprehensive 
+testing for a combination of functionalities and changes. 
+
+17. functional testing verifies the software is doing what is expected of it. regression testing verifies the changes and updates to the software 
+do not create new bugs or defects. smoke testing verifies the critical functionalities of a website work correctly. 
+Performance testing tests the systems performance to handle load and requests. 
+
+18. positive testing tests the systems with valud and expected inputs from the client. negative testing tests the apis ability to handle unforseen 
+inputs from the user. 
+
+19. testing the load capabilities of an api can help make the software run more efficiently under heavier load. 
+
+20. usability tests the smoothness to the UI side of the project. making sure that the client has a good experience when interacting with the page. 
+
+21. security testing is important to assure that the important data being stored is stored safely, and being transfered safely so that it is not 
+able to be stolen. 
+
+22. capability testing assures that the web api works properly accorss different environments, platforms, browsers and devices. 
+
+23. recovery testing tests how quickly the application can reset and bounce back after a system failure or errors. 
+
+24. UAT tests real world scenarios from the client side and seeing how the project handles everything. Typically, UAT is performed by representatives 
+from the client or stakeholder. 
+
+25. unit testing for the individual functionalities. integrated testing for components that need to work together. end to end testing for software 
+readiness as a whole. functional testing for making sure the functionality in the routes etc all work correctly. regression testing for checking that 
+updating the code doesnt effect the codes performance. smoke testing for assuring the critical components of the code work correctly. 
+performance testing tests the how quickly a heavy load can be processed. Load testings tests how much load the server can handle. usability testing 
+tests how user friendly the application is. compatibility testing tests how well the software works across different browsers, devices, environments etc. 
