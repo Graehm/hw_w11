@@ -1,7 +1,3 @@
-// Write code inside the functions
-// You will have to figure out what parameters to include
-// All functions must use recursion
-
 function lengthOfString(str, len = 0) {
     // If the length is 0 (base case), return len (0).
     // if (str.length === 0) return len;
