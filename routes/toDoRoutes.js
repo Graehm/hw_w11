@@ -1,13 +1,11 @@
-require('dotenv').config()
-const mongoose = require('mongoose')
+const express = require('express')
+const router = express.Router()
+const toDoController = require('../controllers/toDoController')
 
-const userSchema = new mongoose.Schema({
-    title: {type: String, require: true}, 
-    description: String, 
-    completed: {type: Boolean, default: false},
-    created_at: {type: Date, default: Date.now}
-})
+router.get('/todos', toDoController.getToDo)
+router.post('/todo', toDoController.createToDo)
+router.get('/todos/:id', toDoController.getToDo)
+router.put('/todos/:id', toDoController.updateToDo)
+router.delete('/todos/:id', toDoController.deleteToDo)
 
-const ToDo = mongoose.model('toDo', toDoSchema)
-module.exports = ToDo
-
+module.exports = router
