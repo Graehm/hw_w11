@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "jest",
-    "dev": "nodemon",
+    "dev": "nodemon server.js",
     "load": "artillery run artillery.yml"
   },
   "jest": {
