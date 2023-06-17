@@ -1,5 +1,5 @@
 require('dotenv').config()
-// const Todo = require('../models/todo')
+const Todo = require('../models/todo')
 
 exports.getAllToDo = async (req, res) => {
     try {
@@ -14,8 +14,8 @@ exports.getAllToDo = async (req, res) => {
 
 exports.createToDo = async (req, res) => {
     try {
-        const {title, description} = req.body
-        const todo = new Todo({title, description})
+        // const {title, description} = req.body
+        const todo = new Todo(req.body)
         await todo.save()
     } catch (error) {
         res.status(400).json({message: error.message})
@@ -26,7 +26,7 @@ exports.getToDo = async (req, res) => {
     try {
         
     } catch (error) {
-        
+        res.status(400).json({message: error.message})
     }
 }
 
@@ -45,3 +45,5 @@ exports.deleteToDo = async (req, res) => {
         res.status(400).json({message: error.message})
     }
 }
+
+
