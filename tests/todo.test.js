@@ -20,5 +20,18 @@ afterAll(async() => {
 })
 
 describe('Test todos endpoints', () => {
-    
+    test('should create new post', async () => {
+        const response = await request(app)
+        .post('/todos')
+        .send({title: "test title", description: "test desc."})
+
+        expect(response.statusCode).toBe(200)
+        expect(response.body.title).toEqual("test title")
+        expect(response.body.description).toEqual("test desc.")
+        expect(response.body.completed).toEqual(false)
+    })
+    test('should return list of todos in array', () => {
+
+    })
+
 })

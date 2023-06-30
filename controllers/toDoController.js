@@ -1,7 +1,7 @@
 require('dotenv').config()
 const Todo = require('../models/todo')
 
-exports.getAllToDo = async (req, res) => {
+exports.getAllTodo = async (req, res) => {
     try {
         const foundTodos = await Todo.find({})
         res.json('todos/Index', {
@@ -12,7 +12,7 @@ exports.getAllToDo = async (req, res) => {
     }
 }
 
-exports.createToDo = async (req, res) => {
+exports.createTodo = async (req, res) => {
     try {
         // const {title, description} = req.body
         const todo = new Todo(req.body)
@@ -23,7 +23,7 @@ exports.createToDo = async (req, res) => {
     }
 }
 
-exports.getToDo = async (req, res) => {
+exports.getTodo = async (req, res) => {
     try {
         const foundTodo = await Todo.findOne({_id: req.body.id})
         res.json(todo/Show, {
@@ -34,17 +34,31 @@ exports.getToDo = async (req, res) => {
     }
 }
 
-exports.updateToDo = async (req, res) => {
+exports.updateTodo = async (req, res) => {
     try {
         const foundTodo = await Todo.findOne({'_id': req.params.id})
+        if(!todo){
+            res.status(400).json({message: error.message})
+        }else {
+            const properties = Object.keys(req.body)
+            properties.forEach((property) => (todo[property] =
+            re.body[property]))
+            await todo.sace()
+            res.json(todo)
+        }
     } catch (error) {
         res.status(400).json({message: error.message})
     }
 }
 
-exports.deleteToDo = async (req, res) => {
+exports.deleteTodo = async (req, res) => {
     try {
         await Todo.findOneAndDelete({'_id': req.params.id})
+        if(!deleteTdod){
+            res.status(400).json({message: error.message})
+        }else{
+            res.json(deleteTodo)
+        }
     } catch (error) {
         res.status(400).json({message: error.message})
     }
