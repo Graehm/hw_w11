@@ -9,5 +9,7 @@ scenarios:
           url: "/todos"
           json:
             title: "test"
-            description: "testing"
+            description: "test desc."
+      - get: 
+          url: "/todos"
             
